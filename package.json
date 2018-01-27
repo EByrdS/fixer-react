@@ -9,11 +9,14 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-jest": "^22.1.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babelify": "^8.0.0",
     "browser-sync": "^2.23.5",
     "browserify": "^15.2.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.2",
     "gulp-concat": "^2.6.1",
@@ -23,6 +26,8 @@
     "gulp-sourcemaps": "^1.12.1",
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^3.0.0",
+    "jest": "^22.1.4",
+    "jest-cli": "^22.1.4",
     "pump": "^2.0.1",
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.10.0"
@@ -34,7 +39,7 @@
     ]
   },
   "scripts": {
-    "test": "test",
+    "test": "jest --watch",
     "start": "gulp"
   },
   "repository": {

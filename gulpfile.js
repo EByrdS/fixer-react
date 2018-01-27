@@ -19,6 +19,9 @@ var path = {
   ENTRY_POINT: 'app/js/index.js',
   JS: 'app/js/**/*.js',
   SCSS: 'app/css/**/*.scss',
+  PUBLIC: 'app/public/**/*',
+  DEV_PUBLIC: 'dev/public',
+  DIST_PUBLIC: 'dist/public',
   OUT: 'build.js',
   MINIFIED_OUT: 'build.min.js',
   MINIFIED_CSS: 'styles.min.css',
@@ -54,6 +57,7 @@ gulp.task('default', [
   'sass',
   'transform',
   'replaceHTML-dev',
+  'copy-public-dev',
   'serve'
 ]);
 
@@ -94,6 +98,14 @@ gulp.task('replaceHTML-dev', function(cb) {
   ], cb);
 });
 
+// Copy public dir into dev
+gulp.task('copy-public-dev', function(cb) {
+  pump([
+    gulp.src(path.PUBLIC),
+    gulp.dest(path.DEV_PUBLIC)
+  ], cb);
+});
+
 // Listen to dev directory and reload with changes.
 gulp.task('serve', function() {
   connect.server({
@@ -116,6 +128,7 @@ gulp.task('serve', function() {
 
 gulp.task('production', [
   'replaceHTML-prod',
+  'copy-public-prod',
   'build',
   'sass-production',
   'serve-production'
@@ -154,6 +167,14 @@ gulp.task('sass-production', function(cb) {
     cleanCSS(),
     concat(path.MINIFIED_CSS),
     gulp.dest(path.DIST),
+  ], cb);
+});
+
+// Copy public dir into dist
+gulp.task('copy-public-prod', function(cb) {
+  pump([
+    gulp.src(path.PUBLIC),
+    gulp.dest(path.DIST_PUBLIC)
   ], cb);
 });
 
