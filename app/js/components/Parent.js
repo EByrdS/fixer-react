@@ -1,15 +1,15 @@
 import React from 'react';
 import Child from './Child.js';
 
-var Parent = React.createClass({
-  render: function() {
+class Parent extends React.Component {
+  render() {
     return (
-      <div>
+      <div className="parent">
         <div> This is the parent. </div>
-        <Child name="child"/>
+        <Child name="child!"/>
       </div>
     );
   }
-});
+}
 
 export default Parent;
