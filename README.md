@@ -25,19 +25,23 @@ This application was created with the following commands, in a C9 environment
 4. sudo npm install gulp -g
 5. npm install --save-dev pump
 6. npm install --save-dev gulp
-8. npm install --save-dev gulp-sass
-9. npm install --save-dev browser-sync
-10. npm install --save-dev gulp-sourcemaps
-12. npm install --save-dev gulp-uglify
-13. npm install --save-dev gulp-clean-css
-14. npm install --save-dev gulp-html-replace
-16. npm install --save-dev gulp-connect
-17. npm install --save-dev vinyl-source-stream
-18. npm install --save-dev browserify
-19. npm install --save-dev watchify
-21. npm install --save-dev gulp-streamify
-22. npm install --save-dev babelify
-24. npm install --save-dev gulp-concat
+7. npm install --save-dev gulp-sass
+8. npm install --save-dev browser-sync
+9. npm install --save-dev gulp-sourcemaps
+10. npm install --save-dev gulp-uglify
+11. npm install --save-dev gulp-clean-css
+12. npm install --save-dev gulp-html-replace
+13. npm install --save-dev gulp-connect
+14. npm install --save-dev vinyl-source-stream
+15. npm install --save-dev browserify
+16. npm install --save-dev watchify
+17. npm install --save-dev gulp-streamify
+18. npm install --save-dev babelify
+19. npm install --save-dev gulp-concat
+20. npm install -g jest
+21. npm install --save-dev babel-jest
+22. npm install --save-dev jest
+23. npm install --save-dev jest-cli
 
 ### Development
 Build *dev* directory and listen with browserSync:
