@@ -36,13 +36,28 @@ This application was created with the following commands, in a C9 environment
 15. npm install --save-dev envify uglify-js uglifyify
 16. npm install --save-dev gulp-connect
 
-### Production
-Create a production build using the following command:
+### Development
+Build *dev* directory and listen with browserSync:
 ```bash
- browserify ./dist/src/build.min.js \
-    -g [ envify --NODE_ENV production ] \
-    -g uglifyify | uglifyjs --compress --mangle > ./bundle.js
+npm start
 ```
+This will transform all JSX into JS, and SASS into CSS. The number of files
+and their distribution is left unaffected.
+> NOTE: `npm start` will execute the `gulp` script, which in turn
+executes gulp's `'default'` task. You can see this task in the `gulpfile.js`
+file. This command behaves exactly as `gulp` or `gulp default`.
+
+### Production
+Build *dist* directory and listen with browserSync:
+```bash
+gulp production
+```
+This will transform all JSX into JS, and SASS into CSS. It will
+concatenate and minify all `.js` files into a single `build.min.js` file.
+It will also concatenate and minify all `.css` files (previously transformed
+from `.scss` files) into a single `styles.min.css` file. The corresponding
+changes to the `index.html` file, regarding `<script>` and `<link>` tags are
+automatically made to match the created compact version.
 
 ### References: Getting started
 * [React](https://reactjs.org/docs/add-react-to-an-existing-app.html#installing-react)
