@@ -42,6 +42,16 @@ This application was created with the following commands, in a C9 environment
 21. npm install --save-dev babel-jest
 22. npm install --save-dev jest
 23. npm install --save-dev jest-cli
+24. npm install --save-dev enzyme
+25. npm install --save-dev enzyme-adapter-react-16
+
+### Testing
+Watch files and run their respective test with Jest:
+```bash
+npm test
+```
+> NOTE: This command will execute `jest --watch`. It will run in the terminal
+the tests corresponding to changed files.
 
 ### Development
 Build *dev* directory and listen with browserSync:
