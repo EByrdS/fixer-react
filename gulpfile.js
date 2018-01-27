@@ -41,6 +41,7 @@ gulp.task('build-development', [
   'copy'
 ]);
 
+// Convert all SASS files into a cleaned CSS version, reload browserSync.
 gulp.task('sass', function(cb) {
   pump([
     gulp.src(path.SCSS),
@@ -53,6 +54,7 @@ gulp.task('sass', function(cb) {
   ], cb);
 });
 
+// Convert all JSX into JS files, no concatenation.
 gulp.task('transform', function(cb) {
   pump([
     gulp.src(path.JS),
@@ -61,6 +63,7 @@ gulp.task('transform', function(cb) {
   ], cb);
 });
 
+// Copy index.html file exactly into dev's file.
 gulp.task('copy', function(cb) {
   pump([
     gulp.src(path.HTML),
@@ -68,6 +71,7 @@ gulp.task('copy', function(cb) {
   ], cb);
 });
 
+// Listen to dev directory and reload with changes.
 gulp.task('serve', function() {
   connect.server({
     port: 8000,
@@ -98,6 +102,7 @@ gulp.task('build-production', [
   'sass-production'
 ]);
 
+// Replace :js and :css builds with their respective tag in index.html.
 gulp.task('replaceHTML', function(cb) {
   pump([
     gulp.src(path.HTML),
@@ -109,6 +114,7 @@ gulp.task('replaceHTML', function(cb) {
   ], cb);
 });
 
+// Convert all JSX into JS and create a single minified .js file.
 gulp.task('build', function(cb) {
   pump([
     gulp.src(path.JS),
@@ -123,6 +129,7 @@ gulp.task('build', function(cb) {
   ], cb);
 });
 
+// Convert all SASS into CSS and create a single minified .css file.
 gulp.task('sass-production', function(cb) {
   pump([
     gulp.src(path.SCSS),
@@ -133,6 +140,8 @@ gulp.task('sass-production', function(cb) {
   ], cb);
 });
 
+// Listen to dist directory.
+// Note: It doesn't refresh browserSync.
 gulp.task('serve-production', function() {
   connect.server({
     port: 8000,
