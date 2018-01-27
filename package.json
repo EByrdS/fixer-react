@@ -1,16 +1,53 @@
 {
   "name": "fixer-react",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "React SPA that displays a summary of FX rates using fixer.io",
+  "main": "src/index.js",
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.0"
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "browser-sync": "^2.23.5",
+    "envify": "^4.1.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.2.0",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.12.1",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^2.0.1",
+    "uglify-js": "^3.3.8",
+    "uglifyify": "^4.0.5"
+  },
+  "babel": {
+    "presets": ["react", "env"]
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "test": "test",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EByrdS/fixer-react.git"
+  },
+  "keywords": [
+    "react",
+    "jest",
+    "sass",
+    "tdd",
+    "spa"
+  ],
+  "author": "Emmanuel Byrd",
+  "license": "AGPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/EByrdS/fixer-react/issues"
+  },
+  "homepage": "https://github.com/EByrdS/fixer-react#readme"
 }
