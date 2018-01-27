@@ -25,24 +25,29 @@ This application was created with the following commands, in a C9 environment
 4. sudo npm install gulp -g
 5. npm install --save-dev pump
 6. npm install --save-dev gulp
-7. npm install --save-dev gulp-babel
 8. npm install --save-dev gulp-sass
 9. npm install --save-dev browser-sync
 10. npm install --save-dev gulp-sourcemaps
-11. npm install --save-dev gulp-concat
 12. npm install --save-dev gulp-uglify
 13. npm install --save-dev gulp-clean-css
 14. npm install --save-dev gulp-html-replace
-15. npm install --save-dev envify uglify-js uglifyify
 16. npm install --save-dev gulp-connect
+17. npm install --save-dev vinyl-source-stream
+18. npm install --save-dev browserify
+19. npm install --save-dev watchify
+21. npm install --save-dev gulp-streamify
+22. npm install --save-dev babelify
+24. npm install --save-dev gulp-concat
 
 ### Development
 Build *dev* directory and listen with browserSync:
 ```bash
 npm start
 ```
-This will transform all JSX into JS, and SASS into CSS. The number of files
-and their distribution is left unaffected.
+This will transform all JSX into JS, and SASS into CSS.
+The resulting JS is inserted in a `build.js` file.
+The resulting CSS is inserted in a `styles.min.css` file.
+The corresponding changes to the `index.html` tags are made automatically.
 > NOTE: `npm start` will execute the `gulp` script, which in turn
 executes gulp's `'default'` task. You can see this task in the `gulpfile.js`
 file. This command behaves exactly as `gulp` or `gulp default`.
