@@ -9,6 +9,5 @@ configure({ adapter: new Adapter() });
 
 test('Renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Rate base="USD"
-  quote="MXN" value={18.9} indicador="up"/>, div);
+  ReactDOM.render(<Rate base="USD"  quote="MXN"/>, div);
 });
