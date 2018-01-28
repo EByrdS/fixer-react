@@ -21,5 +21,5 @@ test('Contains Graph h2', () => {
 test('Contains Today h2', () => {
   const wrapper = shallow(<Latest />);
   expect(wrapper.find("#latest-list h2")).toBeTruthy();
-  expect(wrapper.find("#latest-list h2").text()).toBe("Today");
+  expect(wrapper.find("#latest-list h2").text()).toBe("Latest");
 });
