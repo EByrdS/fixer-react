@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Parent from './components/Parent.js';
+import Logo from './components/Logo.js';
+import Mode from './components/Mode.js';
+import Author from './components/Author.js';
 
 ReactDOM.render(
-  <h1>So long and thanks for all the fish!</h1>,
+  <Logo />,
   document.getElementById('root')
 );
 
 ReactDOM.render(
-  <Parent />,
-  document.getElementById('root')
+  <div>
+    <Mode />
+    <div id="description">
+    A React app that displays a summary of FX rates
+    </div>
+    <Author />
+  </div>,
+  document.getElementById('app-footer')
 );
