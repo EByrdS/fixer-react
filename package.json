@@ -39,6 +39,9 @@
       "env"
     ]
   },
+  "jest": {
+    "roots": ["app"]
+  },
   "scripts": {
     "test": "jest --watch",
     "start": "gulp"
