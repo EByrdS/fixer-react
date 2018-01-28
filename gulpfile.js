@@ -39,7 +39,10 @@ function bundle(cb) {
 
 var watcher = watchify(browserify({
   entries: [path.ENTRY_POINT],
-  transform: [babelify],
+  transform: [
+    [babelify],
+    ['envify', { NODE_ENV: 'development' }]
+  ],
   debug: true,
   cache: {},
   packageCache: {},
@@ -151,7 +154,10 @@ gulp.task('build', function(cb) {
   pump([
     browserify({
       entries: [path.ENTRY_POINT],
-      transform: [babelify]
+      transform: [
+        [babelify],
+        ['envify', { NODE_ENV: 'production' }]
+      ]
     }).bundle(),
     source(path.MINIFIED_OUT),
     streamify(uglify(path.MINIFIED_OUT)),

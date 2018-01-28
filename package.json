@@ -15,6 +15,7 @@
     "babelify": "^8.0.0",
     "browser-sync": "^2.23.5",
     "browserify": "^15.2.0",
+    "envify": "^4.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "gulp": "^3.9.1",
@@ -37,6 +38,9 @@
       "react",
       "env"
     ]
+  },
+  "jest": {
+    "roots": ["app"]
   },
   "scripts": {
     "test": "jest --watch",

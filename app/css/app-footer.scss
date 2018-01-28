@@ -1,0 +1,39 @@
+$blue: #3587A4;
+$pale-blue: #88CCF1;
+$pale-green: #619B8A;
+$dark-green: #475B5A;
+$chalk: #C1DFF0;
+
+div#app-footer{
+  display: inline-block;
+  width: 100%;
+  padding-top: 5px;
+  border-top: 1px solid $dark-green;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.8em;
+  color: $dark-green;
+
+  #description{
+    display: inline-block;
+  }
+
+  #mode{
+    float: left;
+  }
+
+  #author{
+    float: right;
+
+    a{
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    img{
+      float: right;
+      border-radius: 50%;
+      margin: auto 5px;
+    }
+  }
+}

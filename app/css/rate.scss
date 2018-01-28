@@ -1,0 +1,35 @@
+$blue: #3587A4;
+$pale-blue: #88CCF1;
+$pale-green: #619B8A;
+$dark-green: #475B5A;
+$chalk: #C1DFF0;
+
+.rate{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 20px;
+  padding: 3px;
+  border-radius: 2px;
+  margin-bottom: 3px;
+  background-color: rgba(white, 0.4);
+  text-transform: uppercase;
+  .date{
+    font-size: 0.9em;
+    color: $dark-green;
+  }
+  .name{
+    color: $dark-green;
+  }
+  .value{
+    color: $dark-green;
+    text-align: right;
+  }
+  .indicator{
+    text-align: center;
+    .fa-caret-up{
+      color: #267F00;
+    }
+    .fa-caret-down{
+      color: #A00000;
+    }
+  }
+}
