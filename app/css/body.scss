@@ -5,6 +5,21 @@ $dark-green: #475B5A;
 $chalk: #C1DFF0;
 
 body{
+  margin: 20px;
   background-color: #619B8A;
   font-family: sans-serif;
+}
+
+#left-pane{
+  float: left;
+  width: calc(100% - 330px);
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  background-color: $chalk;
+}
+
+#right-pane{
+  float: right;
+  width: 300px;
 }
