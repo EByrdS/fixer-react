@@ -6,12 +6,16 @@ $chalk: #C1DFF0;
 
 .rate{
   display: grid;
-  grid-template-columns: 1fr 1fr 20px;
+  grid-template-columns: 1fr 1fr 1fr 20px;
   padding: 3px;
   border-radius: 2px;
   margin-bottom: 3px;
   background-color: rgba(white, 0.4);
   text-transform: uppercase;
+  .date{
+    font-size: 0.9em;
+    color: $dark-green;
+  }
   .name{
     color: $dark-green;
   }
