@@ -203,6 +203,7 @@ from scratch in a C9 environment, with a 'blank' template.
 23. npm install --save-dev jest-cli
 24. npm install --save-dev enzyme
 25. npm install --save-dev enzyme-adapter-react-16
+26. npm install --save-dev envify
 
 ### References
 * [Gettin started with React](https://reactjs.org/docs/add-react-to-an-existing-app.html#installing-react)
