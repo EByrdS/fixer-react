@@ -1,0 +1,18 @@
+$blue: #3587A4;
+$pale-blue: #88CCF1;
+$pale-green: #619B8A;
+$dark-green: #475B5A;
+$chalk: #C1DFF0;
+
+#latest{
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: $chalk;
+
+  h2 {
+    margin-bottom: 0.2em;
+    border-bottom: 1px solid $dark-green;
+    color: $dark-green;
+  }
+}
