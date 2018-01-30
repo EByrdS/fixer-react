@@ -1,0 +1,17 @@
+$blue: #3587A4;
+$pale-blue: #88CCF1;
+$pale-green: #619B8A;
+$dark-green: #475B5A;
+$chalk: #C1DFF0;
+
+select.currency{
+  background-color: $pale-blue;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(black, 0.5);
+  height: 2em;
+  margin: auto 3px;
+  font-weight: bold;
+  color: $dark-green;
+  border: none;
+  width: calc(50% - 6px);
+}
