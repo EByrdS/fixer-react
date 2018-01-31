@@ -10,6 +10,11 @@ body{
   font-family: sans-serif;
 }
 
+#root{
+  display: table;
+  margin: 0 auto;
+}
+
 #left-pane{
   float: left;
   width: calc(100% - 330px);
