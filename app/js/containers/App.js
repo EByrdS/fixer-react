@@ -10,14 +10,14 @@ class App extends React.Component {
     this.state = {
       base: props.base,
       quote: props.quote,
-      days: props.days
+      days: props.days,
     };
   }
 
   onChildChange(newState) {
     this.setState({
       base: newState.base,
-      quote: newState.quote
+      quote: newState.quote,
     });
   }
 
@@ -32,18 +32,6 @@ class App extends React.Component {
     this.setState({
       days: newDays,
     });
-  }
-
-  updateGraph() {
-    // console.log("Graph update!");
-  }
-
-  componentDidMount() {
-    this.updateGraph();
-  }
-
-  componentDidUpdate() {
-    this.updateGraph();
   }
 
   render() {
@@ -62,13 +50,13 @@ class App extends React.Component {
               {this.state.quote}
             </div>
           </div>
-          <Time selected="7"
-            callbackParent={(newDays) => this.changeDays(newDays)}/>
           <div id="chart-container">
             <Chart base={this.state.base}
                    quote={this.state.quote}
                    days={this.state.days}/>
           </div>
+          <Time selected="7"
+            callbackParent={(newDays) => this.changeDays(newDays)}/>
         </div>
         <div id="right-pane">
           <Logo />
