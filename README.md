@@ -216,3 +216,4 @@ from scratch in a C9 environment, with a 'blank' template.
 * [Getting started with Jest](https://facebook.github.io/jest/docs/en/getting-started.html)
 * [Expand Jest test suite with Enzyme](http://airbnb.io/enzyme/)
 * [Color pallete creation with coolors.co](https://coolors.co/)
+* [FusionCharts with React](https://www.fusioncharts.com/react-charts/#/demos/ex1)
