@@ -9,7 +9,7 @@ var myDataSource = {
   chart: {
     xAxisName: "Date",
     yAxisName: "Value",
-    yAxisMaxValue: "",
+    setAdaptiveYMin: "1",
     palette: "3",
     labelDisplay: "rotate",
     slantLabels: "1",
@@ -42,7 +42,6 @@ class Chart extends React.Component {
     var updatedArray = this.state.dataArray;
     updatedArray.unshift(chartObject);
     var intermediateData = Object.assign({}, this.state.dataSource);
-    intermediateData.chart.yAxisMaxValue = parseFloat(chartObject.value, 10) * 2;
     intermediateData.data = updatedArray;
     this.setState({
       dataSource: intermediateData,
