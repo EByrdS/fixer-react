@@ -18,10 +18,10 @@ class Time extends React.Component {
   render() {
     return (
       <div id="time">
-        <input type="radio" name="time" value="60" id="3M"
+        <input type="radio" name="time" value="60" id="2M"
           checked={this.state.selected === '60'}
           onChange={(event) => this.changeOption(event)}/>
-        <label htmlFor="3M">3M</label>
+        <label htmlFor="2M">2M</label>
 
         <input type="radio" name="time" value="30" id="1M"
           checked={this.state.selected === '30'}
