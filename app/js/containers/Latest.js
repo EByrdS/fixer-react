@@ -19,6 +19,11 @@ class Latest extends React.Component {
   }
 
   changeBase(newValue) {
+    if (this.state.quote == newValue) {
+      console.log("%cCannot compare same currencies!", "color:teal;");
+      this.setState({ base: this.state.base });
+      return;
+    }
     this.setState({ base: newValue });
     this.props.callbackParent({
       base: newValue,
@@ -27,6 +32,11 @@ class Latest extends React.Component {
   }
 
   changeQuote(newValue) {
+    if (this.state.base == newValue) {
+      console.log("%cCannot compare same currencies!", "color:teal;");
+      this.setState({ quote: this.state.quote });
+      return;
+    }
     this.setState({ quote: newValue });
     this.props.callbackParent({
       base: this.state.base,
