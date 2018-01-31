@@ -10,9 +10,15 @@ body{
   font-family: sans-serif;
 }
 
+#root{
+  display: table;
+  margin: 0 auto;
+}
+
 #left-pane{
   float: left;
   width: calc(100% - 330px);
+  min-width: 400px;
   padding: 10px;
   border-radius: 10px;
   margin-right: 10px;

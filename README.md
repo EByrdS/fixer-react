@@ -204,6 +204,7 @@ from scratch in a C9 environment, with a 'blank' template.
 24. npm install --save-dev enzyme
 25. npm install --save-dev enzyme-adapter-react-16
 26. npm install --save-dev envify
+27. npm install --save-dev fusioncharts react-fusioncharts
 
 ### References
 * [Gettin started with React](https://reactjs.org/docs/add-react-to-an-existing-app.html#installing-react)
@@ -215,3 +216,4 @@ from scratch in a C9 environment, with a 'blank' template.
 * [Getting started with Jest](https://facebook.github.io/jest/docs/en/getting-started.html)
 * [Expand Jest test suite with Enzyme](http://airbnb.io/enzyme/)
 * [Color pallete creation with coolors.co](https://coolors.co/)
+* [FusionCharts with React](https://www.fusioncharts.com/react-charts/#/demos/ex1)

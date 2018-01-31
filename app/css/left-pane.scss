@@ -1,0 +1,43 @@
+$blue: #3587A4;
+$pale-blue: #88CCF1;
+$pale-green: #619B8A;
+$dark-green: #475B5A;
+$chalk: #C1DFF0;
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+#title{
+  display: grid;
+  grid-template-columns: 50px 30px 50px;
+  margin-bottom: 5px;
+
+  div{
+    padding: 5px;
+    background-color: $pale-blue;
+    color: $dark-green;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #base{
+    border-radius: 5px 0 0 5px;
+  }
+
+  #swap{
+    cursor: pointer;
+
+    &:hover, &:focus{
+      background-color: shade($pale-blue, 15%);
+    }
+
+    &:active{
+      background-color: shade($pale-blue, 25%);
+    }
+  }
+
+  #quote{
+    border-radius: 0 5px 5px 0;
+  }
+}

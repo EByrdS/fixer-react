@@ -4,6 +4,10 @@ $pale-green: #619B8A;
 $dark-green: #475B5A;
 $chalk: #C1DFF0;
 
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
 div#app-footer{
   display: inline-block;
   width: 100%;
@@ -28,6 +32,15 @@ div#app-footer{
     a{
       text-decoration: none;
       font-weight: bold;
+      color: $blue;
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+      &:visited{
+        color: shade($dark-green, 15%);
+      }
     }
 
     img{

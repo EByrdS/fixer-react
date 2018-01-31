@@ -1,20 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Logo from './components/Logo.js';
-import Latest from './containers/Latest.js';
+import App from './containers/App.js';
 import Mode from './components/Mode.js';
 import Author from './components/Author.js';
 
 ReactDOM.render(
-  <div>
-  <div id="left-pane">
-  Here will go the graph
-  </div>
-  <div id="right-pane">
-    <Logo />
-    <Latest />
-  </div>
-  </div>,
+  <App base="USD" quote="MXN" days={7} />,
   document.getElementById('root')
 );
 
