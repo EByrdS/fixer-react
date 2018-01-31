@@ -11,6 +11,8 @@ var myDataSource = {
     yAxisName: "Value",
     yAxisMaxValue: "",
     palette: "3",
+    labelDisplay: "rotate",
+    slantLabels: "1",
   },
   data: []
 };
